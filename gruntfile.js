@@ -21,6 +21,11 @@ module.exports = function(grunt) {
             options: {
                 jshintrc: '.jshintrc',
             },
+        },
+
+        // Before generating any new files, remove any previously-created files.
+        clean: {
+            tests: ['reports'],
         }
     });
 
@@ -29,6 +34,7 @@ module.exports = function(grunt) {
 
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-clean');
 
     // By default, lint and run all tests.
     grunt.registerTask('default', ['jshint']);
