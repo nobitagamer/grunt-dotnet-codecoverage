@@ -26,6 +26,11 @@ module.exports = function(grunt) {
         // Before generating any new files, remove any previously-created files.
         clean: {
             tests: ['reports'],
+        },
+
+        // Unit tests.
+        nodeunit: {
+            tests: ['test/*_test.js'],
         }
     });
 
@@ -35,6 +40,7 @@ module.exports = function(grunt) {
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
     // By default, lint and run all tests.
     grunt.registerTask('default', ['jshint']);
