@@ -1,6 +1,6 @@
 /*
- * grunt-dotnet-opencover
- * https://github.com/marcofranssen/grunt-dotnet-opencover
+ * grunt-dotnet-codecoverage
+ * https://github.com/marcofranssen/grunt-dotnet-codecoverage
  *
  * Copyright (c) 2014 Marco Franssen
  * Licensed under the MIT license.
@@ -26,6 +26,21 @@ module.exports = function(grunt) {
         // Before generating any new files, remove any previously-created files.
         clean: {
             tests: ['reports'],
+        },
+
+        // Configuration to be run (and then tested).
+        codecoverage: {
+            options: {
+                opencoverExe: 'test/src/packages/OpenCover.4.5.2316/OpenCover.Console.exe',
+                reportGeneratorExe: 'test/src/packages/ReportGenerator.1.9.1.0/ReportGenerator.exe',
+                target: 'test/src/packages/Machine.Specifications.0.6.2/tools/mspec-clr4.exe',
+                output: 'reports/codecoverage',
+                registerUser: true,
+                reportTypes: ['html', 'xml']
+            },
+            specs: {
+                src: ['test/src/**/bin/Debug/*Specs.dll']
+            }
         },
 
         // Unit tests.
@@ -74,7 +89,8 @@ module.exports = function(grunt) {
 
     // Whenever the "test" task is run, first clean the "tmp" dir, then run this
     // plugin's task(s), then test the result.
-    grunt.registerTask('test', ['clean', 'shell:nuget', 'msbuild', 'nodeunit']);
+    grunt.registerTask('test', ['clean', 'shell:nuget', 'msbuild', 'codecoverage', 'nodeunit']);
+
     // By default, lint and run all tests.
     grunt.registerTask('default', ['jshint', 'test']);
 
