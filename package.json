@@ -1,0 +1,46 @@
+{
+    "name": "grunt-dotnet-codecoverage",
+    "description": "Grunt plugin to generate code coverage report using opencover and reportgenerator",
+    "version": "0.0.0",
+    "homepage": "https://github.com/marcofranssen/grunt-dotnet-codecoverage",
+    "author": {
+        "name": "Marco Franssen",
+        "email": "marco.franssen@gmail.com",
+        "url": "http://marcofranssen.nl/about"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/marcofranssen/grunt-dotnet-codecoverage.git"
+    },
+    "bugs": {
+        "url": "https://github.com/marcofranssen/grunt-dotnet-codecoverage/issues"
+    },
+    "licenses": [{
+        "type": "MIT",
+        "url": "https://github.com/marcofranssen/grunt-dotnet-codecoverage/blob/master/LICENSE-MIT"
+    }],
+    "engines": {
+        "node": ">= 0.8.0"
+    },
+    "scripts": {
+        "test": "grunt test"
+    },
+    "devDependencies": {
+        "grunt-contrib-jshint": "~0.6.0",
+        "grunt": "~0.4.2"
+    },
+    "peerDependencies": {
+        "grunt": "~0.4.2"
+    },
+    "keywords": [
+        "gruntplugin",
+        "grunt",
+        ".net",
+        "dotnet",
+        "c#",
+        "csharp",
+        "opencover",
+        "reportgenerator",
+        "coverage"
+    ]
+}
