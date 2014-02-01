@@ -1,0 +1,7 @@
+node_modules
+npm-debug.log
+reports
+test/src/**/bin
+test/src/**/obj
+test/src/packages
+test/src/**/*.suo
