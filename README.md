@@ -1,4 +1,5 @@
 # grunt-dotnet-codecoverage
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/marcofranssen/grunt-dotnet-codecoverage?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 > Grunt plugin to generate code coverage report using opencover and reportgenerator
 
