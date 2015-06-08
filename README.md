@@ -103,7 +103,7 @@ grunt.initConfig({
     options: {
       opencoverExe: 'test/src/packages/OpenCover.4.5.2316/OpenCover.Console.exe',
       reportGeneratorExe: 'test/src/packages/ReportGenerator.1.9.1.0/ReportGenerator.exe',
-      target: 'packages\\NUnit.Runners.2.6.4\\tools\\nunit-console.exe',    
+      target: 'packages/NUnit.Runners.2.6.4/tools/nunit-console.exe',    
       additionalTargetArgs: '/noshadow',
       additionalTargetParameters: '-filter:"+[MyCode]*"',
       output: 'reports/codecoverage',
