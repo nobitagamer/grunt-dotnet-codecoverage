@@ -84,7 +84,25 @@ grunt.initConfig({
     options: {
       opencoverExe: 'test/src/packages/OpenCover.4.5.2316/OpenCover.Console.exe',
       reportGeneratorExe: 'test/src/packages/ReportGenerator.1.9.1.0/ReportGenerator.exe',
-      // target: 'test/src/packages/Machine.Specifications.0.6.2/tools/mspec-clr4.exe',
+      target: 'test/src/packages/Machine.Specifications.0.6.2/tools/mspec-clr4.exe',
+      output: 'reports/codecoverage',
+      registerUser: true,
+      reportTypes: ['html', 'xml']
+    },
+    specs: {
+      src: ['test/src/**/bin/Debug/*Specs.dll']
+    }
+  },
+});
+```
+
+nunit
+```js
+grunt.initConfig({
+  codecoverage: {
+    options: {
+      opencoverExe: 'test/src/packages/OpenCover.4.5.2316/OpenCover.Console.exe',
+      reportGeneratorExe: 'test/src/packages/ReportGenerator.1.9.1.0/ReportGenerator.exe',
       target: 'packages\\NUnit.Runners.2.6.4\\tools\\nunit-console.exe',    
       additionalTargetArgs: '/noshadow',
       additionalTargetParameters: '-filter:"+[MyCode]*"',
@@ -97,6 +115,7 @@ grunt.initConfig({
     }
   },
 });
+
 ```
 
 ## Contributing
